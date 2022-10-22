@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import passport from 'passport';
 import { connect } from "./config/db";
 import { router as userRoutes } from "./routes";
+import cors from "cors"
 
 import passportStrategy from "./config/passport";
 
@@ -10,6 +11,11 @@ const app = express();
 
 dotenv.config();
 connect();
+
+const options = {
+   origin: ['http://localhost:3000', 'http://localhost:5173'],
+}
+app.use(cors(options));
 
 passportStrategy(passport);
 app.use(passport.initialize());
