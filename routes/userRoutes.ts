@@ -2,7 +2,6 @@ import { Router } from "express";
 import passport from 'passport';
 import { registerUser, loginUser, getUser, updateUser, deleteUser } from "../controller/user.controller";
 
-// import { protect } from "../middleware/auth.middleware";
 
 const router: Router = Router();
 

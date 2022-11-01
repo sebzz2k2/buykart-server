@@ -24,6 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 app.use(userRoutes);
 
+
 app.get("/", (req: Request, res: Response) => {
    res.json({ status: "ok" });
 });

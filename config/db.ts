@@ -1,7 +1,7 @@
-import * as Mongoose from "mongoose";
+import Mongoose from "mongoose";
 let database: Mongoose.Connection;
 export const connect = async () => {
-    // add your own uri below
+
     const uri = process.env.DATABASE_URI as string
     if (database) {
         return;
